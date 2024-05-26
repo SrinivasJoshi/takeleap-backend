@@ -1,0 +1,16 @@
+{
+  "id": "mig_cp8s2uobnhe4hhtsr9v0",
+  "parentID": "mig_cp8s1ggl703neuhj6ie0",
+  "checksum": "1:c2e7261d2f983c005fceb04506dafa8599cbdedc06e803b2ba139e0a23d8c496",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "gender",
+          "type": "string"
+        },
+        "table": "mentors"
+      }
+    }
+  ]
+}

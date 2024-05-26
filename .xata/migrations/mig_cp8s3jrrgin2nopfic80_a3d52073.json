@@ -1,0 +1,16 @@
+{
+  "id": "mig_cp8s3jrrgin2nopfic80",
+  "parentID": "mig_cp8s3h8bnhe4hhtsra10",
+  "checksum": "1:a3d52073a6a8081fb9349b526b765e3ffa11b8ded7cd6b7d3189dbb2c6ce1eba",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "postGraduateInstitution",
+          "type": "string"
+        },
+        "table": "mentors"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "mig_cp8s47gl703neuhj6ijg",
+  "parentID": "mig_cp8s44rrgin2nopficag",
+  "checksum": "1:a46b811d011315ae7e11bca6142e4fc324511eb2d95dbd07e57ba4758681ecef",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "Q",
+          "type": "int"
+        },
+        "table": "greScore"
+      }
+    }
+  ]
+}

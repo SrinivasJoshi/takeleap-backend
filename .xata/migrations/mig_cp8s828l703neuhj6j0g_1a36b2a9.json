@@ -1,0 +1,20 @@
+{
+  "id": "mig_cp8s828l703neuhj6j0g",
+  "parentID": "mig_cp8s7d8l703neuhj6ivg",
+  "checksum": "1:1a36b2a912715e856c5da47081ad75438883df56453fafc12d9ecdaac3bf582e",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "greLink",
+          "type": "link",
+          "link": {
+            "table": "greScore"
+          },
+          "unique": true
+        },
+        "table": "mentors"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "mig_cp8s6u0l703neuhj6itg",
+  "parentID": "mig_cp8s6sjrgin2nopfick0",
+  "checksum": "1:ab89bdc4329d750d8b7db478bd836d272e6a81df22924786ec056663165dc50a",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "startDate",
+        "table": "professionalExperiences"
+      }
+    }
+  ]
+}

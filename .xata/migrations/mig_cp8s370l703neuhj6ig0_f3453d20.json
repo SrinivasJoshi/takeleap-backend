@@ -1,0 +1,16 @@
+{
+  "id": "mig_cp8s370l703neuhj6ig0",
+  "parentID": "mig_cp8s350bnhe4hhtsra00",
+  "checksum": "1:f3453d2079d80e8f7406b647c0e994bd1bf2a85f0ec06404b60c61861212d95f",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "classRank",
+          "type": "int"
+        },
+        "table": "mentors"
+      }
+    }
+  ]
+}

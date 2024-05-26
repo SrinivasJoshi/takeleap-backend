@@ -1,0 +1,19 @@
+{
+  "id": "mig_cp8s8prrgin2nopficp0",
+  "parentID": "mig_cp8s8lol703neuhj6j3g",
+  "checksum": "1:d462e4a9b141bab3b84e5eb573c44a5709bab2c23fad22755c07d75a5e38d5c2",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "experienceLink",
+          "type": "link",
+          "link": {
+            "table": "professionalExperiences"
+          }
+        },
+        "table": "mentors"
+      }
+    }
+  ]
+}

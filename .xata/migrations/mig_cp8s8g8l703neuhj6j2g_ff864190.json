@@ -1,0 +1,20 @@
+{
+  "id": "mig_cp8s8g8l703neuhj6j2g",
+  "parentID": "mig_cp8s8cgl703neuhj6j1g",
+  "checksum": "1:ff86419002a41acaf5401721317047c64b753c0bb5486a7faabe723664ea37cd",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "toeflLink",
+          "type": "link",
+          "link": {
+            "table": "toeflScore"
+          },
+          "unique": true
+        },
+        "table": "mentors"
+      }
+    }
+  ]
+}

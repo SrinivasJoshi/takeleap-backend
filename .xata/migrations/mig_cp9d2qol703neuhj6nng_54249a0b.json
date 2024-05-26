@@ -1,0 +1,16 @@
+{
+  "id": "mig_cp9d2qol703neuhj6nng",
+  "parentID": "mig_cp8s8prrgin2nopficp0",
+  "checksum": "1:54249a0bd56566ea565e521f349efd5073a245781b6b06318216cb4d3e396104",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "greLinks",
+          "type": "multiple"
+        },
+        "table": "mentors"
+      }
+    }
+  ]
+}

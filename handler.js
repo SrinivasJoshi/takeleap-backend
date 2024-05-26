@@ -1,16 +1,10 @@
 const serverless = require("serverless-http");
 const express = require("express");
 const app = express();
-const mongoose = require('mongoose');
 require('dotenv').config();
-const { Mentor } = require("./models/mentorSchema");
 const port = process.env.PORT || 3000;
 const cors = require('cors');
-
-// Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('MongoDB connected'))
-  .catch(err => console.log(err));
+const {getXataClient} = require('./xata');
 
 app.use(cors());
 app.use(express.json())
@@ -28,10 +22,46 @@ app.get("/hello", (req, res, next) => {
 
 // POST endpoint to add a mentor
 app.post('/takeleap/addMentor', async (req, res) => {
+  const xata = getXataClient();
   try {
-    const mentor = new Mentor(req.body.mentorData);
-    const savedMentor = await mentor.save();
-    res.status(201).json(savedMentor);
+    let data = req.body.mentorData;
+    const greScore = await xata.db.greScore.create({Q:data.greQ,V:data.greV,AWA:data.greAWA});
+    const toeflScore = await xata.db.toeflScore.create({
+      speaking:data.toeflSpeaking,
+      listening:data.toeflListening,
+      reading:data.toeflReading,
+      writing:data.toeflWriting,
+    });
+
+    const publications = await xata.db.publications.create(data.publications);
+    const professionalExperiences = await xata.db.professionalExperiences.create(data.professionalExperiences);
+
+    const publicationIds = publications.map((publication) => publication.id);
+    const experienceIds = professionalExperiences.map((experience) => experience.id);
+
+    const mentor = await xata.db.mentors.create({
+      name:data.name,
+      gender: data.gender,
+      currentLocation: data.currentLocation,
+      currentStatus: data.currentStatus,
+      classRank: data.classRank,
+      greLink:greScore.id,
+      toeflLink:toeflScore.id,
+
+      underGradInstitution: data.underGradInstitution,
+      underGradDegree: data.underGradDegree,
+      undergraduateGPA: data.undergraduateGPA,
+
+      postGraduateInstitution: data.postGraduateInstitution,
+      postGraduateDegree: data.postGraduateDegree,
+      programName: data.programName,
+      universityName: data.universityName,
+
+      publicationLinks : publicationIds,
+      experienceLinks: experienceIds,
+    })
+
+    res.status(201).json(mentor);
   } catch (error) {
     console.error('Error adding mentor:', error);
     res.status(500).json({ message: 'Failed to add mentor', error: error.message });

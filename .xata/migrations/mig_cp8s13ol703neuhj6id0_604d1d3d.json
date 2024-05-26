@@ -1,0 +1,11 @@
+{
+  "id": "mig_cp8s13ol703neuhj6id0",
+  "checksum": "1:604d1d3d8c07567c94b7123dc2bb1e4e725f40f563eed0286ac7e0242089c9cf",
+  "operations": [
+    {
+      "addTable": {
+        "table": "mentors"
+      }
+    }
+  ]
+}

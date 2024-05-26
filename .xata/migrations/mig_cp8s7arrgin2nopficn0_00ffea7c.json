@@ -1,0 +1,16 @@
+{
+  "id": "mig_cp8s7arrgin2nopficn0",
+  "parentID": "mig_cp8s77jrgin2nopficm0",
+  "checksum": "1:00ffea7c4e6ef289467f04497bb4d8c7761720e85e840459a5b5427362cbc0f4",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "awardsRecognition",
+          "type": "string"
+        },
+        "table": "professionalExperiences"
+      }
+    }
+  ]
+}

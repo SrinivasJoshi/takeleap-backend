@@ -1,0 +1,12 @@
+{
+  "id": "mig_cp8s4egl703neuhj6im0",
+  "parentID": "mig_cp8s4c0l703neuhj6ikg",
+  "checksum": "1:d7aaf6e7841b6890b66e127a7ba2a275f67c67875e439f6cbc63f06e6042cf45",
+  "operations": [
+    {
+      "addTable": {
+        "table": "toeflScore"
+      }
+    }
+  ]
+}

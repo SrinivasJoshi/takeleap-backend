@@ -1,0 +1,12 @@
+{
+  "id": "mig_cp8s44rrgin2nopficag",
+  "parentID": "mig_cp8s3r0bnhe4hhtsra40",
+  "checksum": "1:05802652cb5ff3a1dd11523195be85d53e8f65ec28ddf7152e614901dfb7f409",
+  "operations": [
+    {
+      "addTable": {
+        "table": "greScore"
+      }
+    }
+  ]
+}

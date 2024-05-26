@@ -1,0 +1,14 @@
+{
+  "id": "mig_cp9d8r3rgin2nopfigug",
+  "parentID": "mig_cp9d2qol703neuhj6nng",
+  "checksum": "1:71dfaf93d6aed9dfd4b3192f78014252d331818d515008c304ef61024625157f",
+  "operations": [
+    {
+      "renameColumn": {
+        "newName": "publicationLinks",
+        "oldName": "greLinks",
+        "table": "mentors"
+      }
+    }
+  ]
+}
