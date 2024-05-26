@@ -35,6 +35,7 @@ const tables = [
       },
       { name: "publicationLinks", type: "multiple" },
       { name: "experienceLinks", type: "multiple" },
+      { name: "contactNumber", type: "string" },
     ],
   },
   {

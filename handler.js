@@ -47,6 +47,7 @@ app.post('/takeleap/addMentor', async (req, res) => {
       classRank: data.classRank,
       greLink:greScore.id,
       toeflLink:toeflScore.id,
+      contactNumber: data.contactNumber,
 
       underGradInstitution: data.underGradInstitution,
       underGradDegree: data.underGradDegree,
@@ -74,8 +75,9 @@ app.use((req, res, next) => {
   });
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
-});
+// app.listen(port, () => {
+//   console.log(`Server is running on http://localhost:${port}`);
+// });
 
-exports.handler = serverless(app);
+module.exports = app
+// exports.handler = serverless(app);

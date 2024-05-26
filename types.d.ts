@@ -78,6 +78,10 @@ declare const tables: readonly [
       {
         readonly name: "experienceLinks";
         readonly type: "multiple";
+      },
+      {
+        readonly name: "contactNumber";
+        readonly type: "string";
       }
     ];
   },
