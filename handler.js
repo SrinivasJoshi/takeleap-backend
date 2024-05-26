@@ -25,12 +25,16 @@ app.post('/takeleap/addMentor', async (req, res) => {
   const xata = getXataClient();
   try {
     let data = req.body.mentorData;
-    const greScore = await xata.db.greScore.create({Q:data.greQ,V:data.greV,AWA:data.greAWA});
+    const greScore = await xata.db.greScore.create({
+      Q:parseInt(data.greQ),
+      V:parseInt(data.greV),
+      AWA:parseInt(data.greAWA)
+    });
     const toeflScore = await xata.db.toeflScore.create({
-      speaking:data.toeflSpeaking,
-      listening:data.toeflListening,
-      reading:data.toeflReading,
-      writing:data.toeflWriting,
+      speaking:parseInt(data.toeflSpeaking),
+      listening:parseInt(data.toeflListening),
+      reading:parseInt(data.toeflReading),
+      writing:parseInt(data.toeflWriting),
     });
 
     const publications = await xata.db.publications.create(data.publications);
@@ -44,14 +48,14 @@ app.post('/takeleap/addMentor', async (req, res) => {
       gender: data.gender,
       currentLocation: data.currentLocation,
       currentStatus: data.currentStatus,
-      classRank: data.classRank,
+      classRank: parseInt(data.classRank),
       greLink:greScore.id,
       toeflLink:toeflScore.id,
       contactNumber: data.contactNumber,
 
       underGradInstitution: data.underGradInstitution,
       underGradDegree: data.underGradDegree,
-      undergraduateGPA: data.undergraduateGPA,
+      undergraduateGPA: parseFloat(data.undergraduateGPA),
 
       postGraduateInstitution: data.postGraduateInstitution,
       postGraduateDegree: data.postGraduateDegree,
