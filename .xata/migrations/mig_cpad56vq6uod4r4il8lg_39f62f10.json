@@ -1,0 +1,13 @@
+{
+  "id": "mig_cpad56vq6uod4r4il8lg",
+  "parentID": "mig_cpad55fq6uod4r4il8kg",
+  "checksum": "1:39f62f10e87d064030b83aee52fc47e3725ed6aa52a9612f3f92e07d656b1b81",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "underGradDegree",
+        "table": "personalMentors"
+      }
+    }
+  ]
+}

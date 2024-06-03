@@ -1,0 +1,13 @@
+{
+  "id": "mig_cpdga437g140b3b25080",
+  "parentID": "mig_cpdga2f52b9ujk4do87g",
+  "checksum": "1:988614f1368a61c97dd81f8eecb325d07167e1834d3990c3d03be146923c19f9",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "admitProgram",
+        "table": "personalMentors"
+      }
+    }
+  ]
+}

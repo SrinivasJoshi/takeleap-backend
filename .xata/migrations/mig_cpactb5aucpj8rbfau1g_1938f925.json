@@ -1,0 +1,18 @@
+{
+  "id": "mig_cpactb5aucpj8rbfau1g",
+  "parentID": "mig_cpabb4fq6uod4r4il750",
+  "checksum": "1:1938f9251e3e59f7d9dfd45058fd8f909ce1e2573e82a80ebd537575dd08b5bb",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "greScore",
+          "type": "int",
+          "notNull": true,
+          "defaultValue": "000"
+        },
+        "table": "mentors"
+      }
+    }
+  ]
+}

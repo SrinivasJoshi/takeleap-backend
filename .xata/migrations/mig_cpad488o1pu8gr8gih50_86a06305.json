@@ -1,0 +1,16 @@
+{
+  "id": "mig_cpad488o1pu8gr8gih50",
+  "parentID": "mig_cpad45go1pu8gr8gih40",
+  "checksum": "1:86a06305fd2355f4b82dd3519a8690a2724e6f38f71674b0c54bd526b40494d3",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "totalStudents",
+          "type": "int"
+        },
+        "table": "academic"
+      }
+    }
+  ]
+}

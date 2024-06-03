@@ -1,0 +1,16 @@
+{
+  "id": "mig_cpdh9ar7g140b3b250e0",
+  "parentID": "mig_cpdh95v52b9ujk4do8tg",
+  "checksum": "1:93f25c80cd3e00a2430990cd9d4001c944e3e35d1182aae3ad2e58157be3b863",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "studentsToMentor",
+          "type": "int"
+        },
+        "table": "mentorship"
+      }
+    }
+  ]
+}

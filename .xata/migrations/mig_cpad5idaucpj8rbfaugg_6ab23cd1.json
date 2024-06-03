@@ -1,0 +1,13 @@
+{
+  "id": "mig_cpad5idaucpj8rbfaugg",
+  "parentID": "mig_cpad5hdaucpj8rbfaufg",
+  "checksum": "1:6ab23cd14df562feab2d897d516d095e89b9f37ab9edf38fcfce7c23c7a1ab93",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "postGraduateInstitution",
+        "table": "personalMentors"
+      }
+    }
+  ]
+}

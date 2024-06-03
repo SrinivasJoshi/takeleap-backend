@@ -1,0 +1,16 @@
+{
+  "id": "mig_cpad2pgo1pu8gr8gih0g",
+  "parentID": "mig_cpad2foo1pu8gr8gigvg",
+  "checksum": "1:0c550865477548784728c836e785c9e2f2ef41c217da30bfa1ed31cbd2523221",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "gpaScore",
+          "type": "int"
+        },
+        "table": "academic"
+      }
+    }
+  ]
+}

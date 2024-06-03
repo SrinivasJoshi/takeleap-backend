@@ -1,0 +1,16 @@
+{
+  "id": "mig_cpdh4jv52b9ujk4do8mg",
+  "parentID": "mig_cpdh4g752b9ujk4do8lg",
+  "checksum": "1:9353248b72665fb1c974796bb12e4aee2c18a41c1e53eeb11fef4c78679e8243",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "universityName",
+          "type": "string"
+        },
+        "table": "admits"
+      }
+    }
+  ]
+}

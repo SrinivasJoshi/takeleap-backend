@@ -1,0 +1,16 @@
+{
+  "id": "mig_cpad035aucpj8rbfau3g",
+  "parentID": "mig_cpacvsvq6uod4r4il8a0",
+  "checksum": "1:6814b1f0d24bc91be87f260da15c00a22da402c0cb6abe254f41075f965b2125",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "description",
+          "type": "text"
+        },
+        "table": "extraCurricular"
+      }
+    }
+  ]
+}

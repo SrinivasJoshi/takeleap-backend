@@ -1,0 +1,12 @@
+{
+  "id": "mig_cpad1jdaucpj8rbfau6g",
+  "parentID": "mig_cpad157q6uod4r4il8bg",
+  "checksum": "1:9e62a3e74999ec0e8733ad5cf88956fe8b01c14b8fe1cbe0d798440c7929cdc5",
+  "operations": [
+    {
+      "removeTable": {
+        "table": "curricularActivities"
+      }
+    }
+  ]
+}

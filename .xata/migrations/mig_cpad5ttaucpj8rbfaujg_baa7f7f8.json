@@ -1,0 +1,16 @@
+{
+  "id": "mig_cpad5ttaucpj8rbfaujg",
+  "parentID": "mig_cpad5rtaucpj8rbfauig",
+  "checksum": "1:baa7f7f8af4aed1acf28ec74b575fdc4b39f5a98dbedf1301bed127f50f5c5ad",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "admitUni",
+          "type": "string"
+        },
+        "table": "personalMentors"
+      }
+    }
+  ]
+}

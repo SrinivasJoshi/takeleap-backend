@@ -1,0 +1,13 @@
+{
+  "id": "mig_cpactr8o1pu8gr8gigpg",
+  "parentID": "mig_cpactonq6uod4r4il7v0",
+  "checksum": "1:51cef62435d79cf58e06b813391798925310e11e8427981fd5029536635aca84",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "avatar",
+        "table": "mentors"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "mig_cpacvsvq6uod4r4il8a0",
+  "parentID": "mig_cpacvpnq6uod4r4il890",
+  "checksum": "1:42d185ec6bf107b9ca045800bd954f8898e88ff082cd498999068171fe4e797b",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "toeflScore",
+          "type": "int"
+        },
+        "table": "mentors"
+      }
+    }
+  ]
+}

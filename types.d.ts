@@ -5,7 +5,7 @@ import type {
 } from "@xata.io/client";
 declare const tables: readonly [
   {
-    readonly name: "mentors";
+    readonly name: "personalMentors";
     readonly columns: readonly [
       {
         readonly name: "name";
@@ -24,131 +24,44 @@ declare const tables: readonly [
         readonly type: "string";
       },
       {
-        readonly name: "classRank";
-        readonly type: "int";
-      },
-      {
-        readonly name: "underGradInstitution";
-        readonly type: "string";
-      },
-      {
-        readonly name: "underGradDegree";
-        readonly type: "string";
-      },
-      {
-        readonly name: "undergraduateGPA";
-        readonly type: "float";
-      },
-      {
-        readonly name: "postGraduateInstitution";
-        readonly type: "string";
-      },
-      {
-        readonly name: "postGraduateDegree";
-        readonly type: "string";
-      },
-      {
-        readonly name: "programName";
-        readonly type: "string";
-      },
-      {
-        readonly name: "universityName";
-        readonly type: "string";
-      },
-      {
-        readonly name: "greLink";
-        readonly type: "link";
-        readonly link: {
-          readonly table: "greScore";
-        };
-        readonly unique: true;
-      },
-      {
-        readonly name: "toeflLink";
-        readonly type: "link";
-        readonly link: {
-          readonly table: "toeflScore";
-        };
-        readonly unique: true;
-      },
-      {
-        readonly name: "publicationLinks";
-        readonly type: "multiple";
-      },
-      {
-        readonly name: "experienceLinks";
-        readonly type: "multiple";
-      },
-      {
         readonly name: "contactNumber";
         readonly type: "string";
-      }
-    ];
-  },
-  {
-    readonly name: "greScore";
-    readonly columns: readonly [
+      },
       {
-        readonly name: "Q";
+        readonly name: "avatar";
+        readonly type: "file";
+      },
+      {
+        readonly name: "greScore";
         readonly type: "int";
       },
       {
-        readonly name: "V";
+        readonly name: "toeflScore";
         readonly type: "int";
       },
       {
-        readonly name: "AWA";
-        readonly type: "int";
-      }
-    ];
-    readonly revLinks: readonly [
-      {
-        readonly column: "greLink";
-        readonly table: "mentors";
-      }
-    ];
-  },
-  {
-    readonly name: "toeflScore";
-    readonly columns: readonly [
-      {
-        readonly name: "speaking";
-        readonly type: "int";
+        readonly name: "admitLinks";
+        readonly type: "multiple";
       },
       {
-        readonly name: "writing";
-        readonly type: "int";
+        readonly name: "professionalLinks";
+        readonly type: "multiple";
       },
       {
-        readonly name: "listening";
-        readonly type: "int";
+        readonly name: "mentorshipLink";
+        readonly type: "link";
+        readonly link: {
+          readonly table: "mentorship";
+        };
+        readonly unique: true;
       },
       {
-        readonly name: "reading";
-        readonly type: "int";
-      }
-    ];
-    readonly revLinks: readonly [
-      {
-        readonly column: "toeflLink";
-        readonly table: "mentors";
-      }
-    ];
-  },
-  {
-    readonly name: "publications";
-    readonly columns: readonly [
-      {
-        readonly name: "title";
-        readonly type: "string";
-      },
-      {
-        readonly name: "journalName";
-        readonly type: "string";
-      },
-      {
-        readonly name: "link";
-        readonly type: "string";
+        readonly name: "academicLink";
+        readonly type: "link";
+        readonly link: {
+          readonly table: "academic";
+        };
+        readonly unique: true;
       }
     ];
   },
@@ -170,41 +83,148 @@ declare const tables: readonly [
       {
         readonly name: "companyName";
         readonly type: "string";
-      },
+      }
+    ];
+  },
+  {
+    readonly name: "academic";
+    readonly columns: readonly [
       {
-        readonly name: "description";
-        readonly type: "text";
-      },
-      {
-        readonly name: "awardsRecognition";
+        readonly name: "masterUni";
         readonly type: "string";
       },
       {
-        readonly name: "numberOfPromotions";
+        readonly name: "masterProgram";
+        readonly type: "string";
+      },
+      {
+        readonly name: "gpaScore";
         readonly type: "int";
+      },
+      {
+        readonly name: "gpaTotal";
+        readonly type: "int";
+      },
+      {
+        readonly name: "startTerm";
+        readonly type: "string";
+      },
+      {
+        readonly name: "startYear";
+        readonly type: "int";
+      },
+      {
+        readonly name: "endTerm";
+        readonly type: "string";
+      },
+      {
+        readonly name: "endYear";
+        readonly type: "int";
+      },
+      {
+        readonly name: "undergradUni";
+        readonly type: "string";
+      },
+      {
+        readonly name: "undergradProgram";
+        readonly type: "string";
+      },
+      {
+        readonly name: "undergradGpaScore";
+        readonly type: "int";
+      },
+      {
+        readonly name: "undergradGpaTotal";
+        readonly type: "int";
+      },
+      {
+        readonly name: "classRank";
+        readonly type: "int";
+      },
+      {
+        readonly name: "totalStudents";
+        readonly type: "int";
+      },
+      {
+        readonly name: "underStartYear";
+        readonly type: "int";
+      },
+      {
+        readonly name: "underEndYear";
+        readonly type: "int";
+      },
+      {
+        readonly name: "doi";
+        readonly type: "multiple";
+      },
+      {
+        readonly name: "numberOfDoi";
+        readonly type: "int";
+      }
+    ];
+    readonly revLinks: readonly [
+      {
+        readonly column: "academicLink";
+        readonly table: "personalMentors";
+      }
+    ];
+  },
+  {
+    readonly name: "admits";
+    readonly columns: readonly [
+      {
+        readonly name: "programName";
+        readonly type: "string";
+      },
+      {
+        readonly name: "universityName";
+        readonly type: "string";
+      }
+    ];
+  },
+  {
+    readonly name: "mentorship";
+    readonly columns: readonly [
+      {
+        readonly name: "programs";
+        readonly type: "multiple";
+      },
+      {
+        readonly name: "expertise";
+        readonly type: "multiple";
+      },
+      {
+        readonly name: "studentsToMentor";
+        readonly type: "int";
+      }
+    ];
+    readonly revLinks: readonly [
+      {
+        readonly column: "mentorshipLink";
+        readonly table: "personalMentors";
       }
     ];
   }
 ];
 export type SchemaTables = typeof tables;
 export type InferredTypes = SchemaInference<SchemaTables>;
-export type Mentors = InferredTypes["mentors"];
-export type MentorsRecord = Mentors & XataRecord;
-export type GreScore = InferredTypes["greScore"];
-export type GreScoreRecord = GreScore & XataRecord;
-export type ToeflScore = InferredTypes["toeflScore"];
-export type ToeflScoreRecord = ToeflScore & XataRecord;
-export type Publications = InferredTypes["publications"];
-export type PublicationsRecord = Publications & XataRecord;
+export type PersonalMentors = InferredTypes["personalMentors"];
+export type PersonalMentorsRecord = PersonalMentors & XataRecord;
 export type ProfessionalExperiences = InferredTypes["professionalExperiences"];
 export type ProfessionalExperiencesRecord = ProfessionalExperiences &
   XataRecord;
+export type Academic = InferredTypes["academic"];
+export type AcademicRecord = Academic & XataRecord;
+export type Admits = InferredTypes["admits"];
+export type AdmitsRecord = Admits & XataRecord;
+export type Mentorship = InferredTypes["mentorship"];
+export type MentorshipRecord = Mentorship & XataRecord;
 export type DatabaseSchema = {
-  mentors: MentorsRecord;
-  greScore: GreScoreRecord;
-  toeflScore: ToeflScoreRecord;
-  publications: PublicationsRecord;
+  personalMentors: PersonalMentorsRecord;
   professionalExperiences: ProfessionalExperiencesRecord;
+  academic: AcademicRecord;
+  admits: AdmitsRecord;
+  mentorship: MentorshipRecord;
 };
 declare const DatabaseClient: any;
 export declare class XataClient extends DatabaseClient<DatabaseSchema> {

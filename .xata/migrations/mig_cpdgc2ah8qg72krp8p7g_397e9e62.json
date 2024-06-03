@@ -1,0 +1,13 @@
+{
+  "id": "mig_cpdgc2ah8qg72krp8p7g",
+  "parentID": "mig_cpdga437g140b3b25080",
+  "checksum": "1:397e9e624d2eef43761332742cface923382db03122d2ec2be632d100305c03a",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "awardsRecognition",
+        "table": "professionalExperiences"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "mig_cpdh4g752b9ujk4do8lg",
+  "parentID": "mig_cpdh4aih8qg72krp8ph0",
+  "checksum": "1:c9628f8629ecd25bea33b541f010992aa658687cff35246dee05d7f653e06ddf",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "programName",
+          "type": "string"
+        },
+        "table": "admits"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "mig_cpad410o1pu8gr8gih2g",
+  "parentID": "mig_cpad3tvq6uod4r4il8ig",
+  "checksum": "1:389de0e8e2ba5289a7e2810eb87eb56d15e1e52bc577427c952eb5fb719bbaca",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "undergradGpaTotal",
+          "type": "int"
+        },
+        "table": "academic"
+      }
+    }
+  ]
+}

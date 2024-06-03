@@ -1,0 +1,19 @@
+{
+  "id": "mig_cpdh7pf52b9ujk4do8q0",
+  "parentID": "mig_cpdh7dih8qg72krp8pm0",
+  "checksum": "1:37dbac7c2aeec4f3793c112d9e140df8a5ee943ac133cb7f6503cfc386f9c0ec",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "professionalLink",
+          "type": "link",
+          "link": {
+            "table": "professionalExperiences"
+          }
+        },
+        "table": "personalMentors"
+      }
+    }
+  ]
+}

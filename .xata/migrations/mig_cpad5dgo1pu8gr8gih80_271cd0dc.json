@@ -1,0 +1,13 @@
+{
+  "id": "mig_cpad5dgo1pu8gr8gih80",
+  "parentID": "mig_cpad5cdaucpj8rbfaudg",
+  "checksum": "1:271cd0dc76713d9a540a162d971d609fc915ce32e588a65a4fbd537c6df73996",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "universityName",
+        "table": "personalMentors"
+      }
+    }
+  ]
+}

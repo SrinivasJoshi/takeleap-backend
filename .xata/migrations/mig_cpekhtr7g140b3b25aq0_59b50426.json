@@ -1,0 +1,20 @@
+{
+  "id": "mig_cpekhtr7g140b3b25aq0",
+  "parentID": "mig_cpe1fh752b9ujk4doigg",
+  "checksum": "1:59b5042673befc7379ad815f0ccaa1a883010461ad61e7f5be65ff06e4415641",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "mentorshipLink",
+          "type": "link",
+          "link": {
+            "table": "mentorship"
+          },
+          "unique": true
+        },
+        "table": "personalMentors"
+      }
+    }
+  ]
+}

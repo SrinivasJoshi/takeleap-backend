@@ -1,0 +1,14 @@
+{
+  "id": "mig_cpacusdaucpj8rbfau2g",
+  "parentID": "mig_cpacu9nq6uod4r4il810",
+  "checksum": "1:f7ee5fa3706257ead8319d0064cabb3ae0311bb9eb403b48efcef70153bb1853",
+  "operations": [
+    {
+      "renameColumn": {
+        "newName": "doi",
+        "oldName": "link",
+        "table": "publications"
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "mig_cpdh8r752b9ujk4do8sg",
+  "parentID": "mig_cpdh7tf52b9ujk4do8r0",
+  "checksum": "1:fbfec7c0dbdbde9d263966476b90bebd4882d69b33b3f3175eefa657079dae1c",
+  "operations": [
+    {
+      "addTable": {
+        "table": "mentorship"
+      }
+    }
+  ]
+}

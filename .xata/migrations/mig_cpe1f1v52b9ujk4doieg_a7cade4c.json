@@ -1,0 +1,16 @@
+{
+  "id": "mig_cpe1f1v52b9ujk4doieg",
+  "parentID": "mig_cpe1ekqh8qg72krp8tu0",
+  "checksum": "1:a7cade4c76150b8e74016193eed834e477ea973fd5ea6862e8adfcbe797699b0",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "academicLinks",
+          "type": "multiple"
+        },
+        "table": "personalMentors"
+      }
+    }
+  ]
+}

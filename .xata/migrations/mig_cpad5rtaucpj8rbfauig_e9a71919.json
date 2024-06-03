@@ -1,0 +1,16 @@
+{
+  "id": "mig_cpad5rtaucpj8rbfauig",
+  "parentID": "mig_cpad5jlaucpj8rbfauhg",
+  "checksum": "1:e9a7191951c68d5640b5cd642c3e7fd71de57d772359bb31783282c17c94e744",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "admitProgram",
+          "type": "string"
+        },
+        "table": "personalMentors"
+      }
+    }
+  ]
+}
