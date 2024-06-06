@@ -14,7 +14,6 @@ const tables = [
       { name: "currentLocation", type: "string" },
       { name: "currentStatus", type: "string" },
       { name: "contactNumber", type: "string" },
-      { name: "avatar", type: "file" },
       { name: "greScore", type: "int" },
       { name: "toeflScore", type: "int" },
       { name: "admitLinks", type: "multiple" },
@@ -30,6 +29,11 @@ const tables = [
         type: "link",
         link: { table: "academic" },
         unique: true,
+      },
+      {
+        name: "avatar",
+        type: "file[]",
+        "file[]": { defaultPublicAccess: true },
       },
     ],
   },
@@ -71,6 +75,7 @@ const tables = [
     columns: [
       { name: "programName", type: "string" },
       { name: "universityName", type: "string" },
+      { name: "scholarshipAmount", type: "string" },
     ],
   },
   {
@@ -79,6 +84,7 @@ const tables = [
       { name: "programs", type: "multiple" },
       { name: "expertise", type: "multiple" },
       { name: "studentsToMentor", type: "int" },
+      { name: "reasonToMentor", type: "multiple" },
     ],
     revLinks: [{ column: "mentorshipLink", table: "personalMentors" }],
   },

@@ -28,10 +28,6 @@ declare const tables: readonly [
         readonly type: "string";
       },
       {
-        readonly name: "avatar";
-        readonly type: "file";
-      },
-      {
         readonly name: "greScore";
         readonly type: "int";
       },
@@ -62,6 +58,13 @@ declare const tables: readonly [
           readonly table: "academic";
         };
         readonly unique: true;
+      },
+      {
+        readonly name: "avatar";
+        readonly type: "file[]";
+        readonly "file[]": {
+          readonly defaultPublicAccess: true;
+        };
       }
     ];
   },
@@ -179,6 +182,10 @@ declare const tables: readonly [
       {
         readonly name: "universityName";
         readonly type: "string";
+      },
+      {
+        readonly name: "scholarshipAmount";
+        readonly type: "string";
       }
     ];
   },
@@ -196,6 +203,10 @@ declare const tables: readonly [
       {
         readonly name: "studentsToMentor";
         readonly type: "int";
+      },
+      {
+        readonly name: "reasonToMentor";
+        readonly type: "multiple";
       }
     ];
     readonly revLinks: readonly [

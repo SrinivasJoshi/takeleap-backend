@@ -23,8 +23,32 @@ router.get('/getMentorById',async(req,res)=>{
     const xata = getXataClient();
     const mentordId = req.body.mentorId;
     try {
-      let data = await xata.db['personalMentors'].read(mentordId);
-      res.status(200).send({Status:'200',Data:data,err:''});
+      let {contactNumber,...data} = await xata.db['personalMentors'].read(mentordId);
+      let admitIds = data.admitLinks;
+      let expIds = data.professionalLinks;
+      let academicId = data.academicLink.id;
+      let mentorshipId = data.mentorshipLink.id;
+
+      let admits = await Promise.all(admitIds.map(async (admitId) => {
+        return await xata.db.admits.read(admitId);
+      }));
+
+      let professionalExperiences = await Promise.all(expIds.map(async (expId) => {
+        return await xata.db.professionalExperiences.read(expId);
+      }));
+
+      let academicData = await xata.db.academic.read(academicId);
+      let mentorshipData = await xata.db.mentorship.read(mentorshipId);
+
+      const {admitLinks,professionalLinks,academicLink,mentorshipLink,...finalData} = {
+        admits,
+        academicData,
+        mentorshipData,
+        professionalExperiences,
+        ...data,
+      }
+
+      res.status(200).send({Status:'200',Data:finalData,err:''});
     } catch (error) {
       console.log(error);
       res.status(200).send({Status:'500',Data:[],err:'Internal Server Error'});
@@ -79,23 +103,23 @@ router.post('/addMentorAcademicData',async(req,res)=>{
     const academicRecord = await xata.db.academic.create({
       masterUni: data.masterUni,
       masterProgram: data.masterProgram,
-      gpaScore:data.gpaScore,
-      gpaTotal:data.gpaTotal,
+      gpaScore:parseInt(data.gpaScore),
+      gpaTotal:parseInt(data.gpaTotal),
       startTerm:data.startTerm,
-      startYear:data.startYear,
+      startYear:parseInt(data.startYear),
       endTerm:data.endTerm,
-      endYear:data.endYear,
+      endYear:parseInt(data.endYear),
 
       undergradUni:data.undergradUni,
       undergradProgram:data.undergradProgram,
-      undergradGpaScore:data.undergradGpaScore,
-      undergradGpaTotal:data.undergradGpaTotal,
-      classRank:data.classRank,
-      totalStudents:data.totalStudents,
-      underStartYear:data.underStartYear,
-      underEndYear:data.underEndYear,
+      undergradGpaScore:parseInt(data.undergradGpaScore),
+      undergradGpaTotal:parseInt(data.undergradGpaTotal),
+      classRank:parseInt(data.classRank),
+      totalStudents:parseInt(data.totalStudents),
+      underStartYear:parseInt(data.underStartYear),
+      underEndYear:parseInt(data.underEndYear),
 
-      numberOfDoi:data.numberOfDoi,
+      numberOfDoi:parseInt(data.numberOfDoi),
       doi:data.doi,
     });
 
@@ -103,7 +127,7 @@ router.post('/addMentorAcademicData',async(req,res)=>{
      const updatedMentorData = await xata.db.personalMentors.update(data.id,{academicLink:academicRecord.id});
      updatedMentorData.update({academicLink : academicRecord.id});
  
-     res.send(200).send({Status:'200',Data:[],error:''});
+     res.status(200).send({Status:'200',Data:[],error:''});
   } catch (error) {
     console.log(error);
     res.status(400).send({Status: '400', Data: [], error})
@@ -115,14 +139,14 @@ router.post('/addMentorProfessionalData',async(req,res)=>{
   let data = req.body; 
 
   try {
-    const professionalExps = await xata.db.professionalExperiences.create(data);
+    const professionalExps = await xata.db.professionalExperiences.create(data.professionalExperiences);
     const professionalExpIds = professionalExps.map((professionalExp) => professionalExp.id);
 
     // Link this to personalMentor table
     const updatedMentorData = await xata.db.personalMentors.update(data.id,{professionalLinks:professionalExpIds});
     updatedMentorData.update({professionalLinks : professionalExpIds});
 
-    res.send(200).send({Status:'200',Data:[],error:''});
+    res.status(200).send({Status:'200',Data:[],error:''});
   } catch (error) {
     console.log(error);
     res.status(400).send({Status: '400', Data: [], error})
@@ -137,14 +161,15 @@ router.post('/addMentorMentorshipData',async(req,res)=>{
     const mentorshipData = await xata.db.mentorship.create({
       programs: data.programs,
       expertise: data.expertise,
-      studentsToMentor: data.studentsToMentor
+      studentsToMentor: parseInt(data.studentsToMentor),
+      reasonToMentor: data.reasonToMentor,
     });
 
      // Link this to personalMentor table
      const updatedMentorData = await xata.db.personalMentors.update(data.id,{mentorshipLink:mentorshipData.id});
      updatedMentorData.update({mentorshipLink : mentorshipData.id});
  
-     res.send(200).send({Status:'200',Data:[],error:''});
+     res.status(200).send({Status:'200',Data:[],error:''});
 
   } catch (error) {
     console.log(error);
@@ -152,57 +177,5 @@ router.post('/addMentorMentorshipData',async(req,res)=>{
   }
 });
 
-router.post('/addMentor', async (req, res) => {
-    const xata = getXataClient();
-    try {
-      let data = req.body.mentorData;
-      const greScore = await xata.db.greScore.create({
-        Q:parseInt(data.greQ),
-        V:parseInt(data.greV),
-        AWA:parseInt(data.greAWA)
-      });
-      const toeflScore = await xata.db.toeflScore.create({
-        speaking:parseInt(data.toeflSpeaking),
-        listening:parseInt(data.toeflListening),
-        reading:parseInt(data.toeflReading),
-        writing:parseInt(data.toeflWriting),
-      });
-  
-      const publications = await xata.db.publications.create(data.publications);
-      const professionalExperiences = await xata.db.professionalExperiences.create(data.professionalExperiences);
-  
-      const publicationIds = publications.map((publication) => publication.id);
-      const experienceIds = professionalExperiences.map((experience) => experience.id);
-  
-      const mentor = await xata.db.mentors.create({
-        name:data.name,
-        gender: data.gender,
-        currentLocation: data.currentLocation,
-        currentStatus: data.currentStatus,
-        classRank: parseInt(data.classRank),
-        greLink:greScore.id,
-        toeflLink:toeflScore.id,
-        contactNumber: data.contactNumber,
-  
-        underGradInstitution: data.underGradInstitution,
-        underGradDegree: data.underGradDegree,
-        undergraduateGPA: parseFloat(data.undergraduateGPA),
-  
-        postGraduateInstitution: data.postGraduateInstitution,
-        postGraduateDegree: data.postGraduateDegree,
-        programName: data.programName,
-        universityName: data.universityName,
-  
-        publicationLinks : publicationIds,
-        experienceLinks: experienceIds,
-      })
-  
-      res.status(201).json(mentor);
-    } catch (error) {
-      console.error('Error adding mentor:', error);
-      res.status(500).json({ message: 'Failed to add mentor', error: error.message });
-    }
-  });
-  
 
 module.exports = router;

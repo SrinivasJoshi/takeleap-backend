@@ -1,0 +1,13 @@
+{
+  "id": "mig_cpguucamo6o6tl5jp380",
+  "parentID": "mig_cpguoumf4hki01mf8uj0",
+  "checksum": "1:7077a4725893dbe95be05c980942fc1198b2dbfe7a3648368a1e8b90c0385676",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "scholarshipAmount",
+        "table": "admits"
+      }
+    }
+  ]
+}

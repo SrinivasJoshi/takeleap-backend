@@ -1,0 +1,13 @@
+{
+  "id": "mig_cpgvqeimo6o6tl5jp3u0",
+  "parentID": "mig_cpguuf2mo6o6tl5jp390",
+  "checksum": "1:ef44892cdc25530fd88946bd47adb34b146386e280bbb34972b5344450d76896",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "avatar",
+        "table": "personalMentors"
+      }
+    }
+  ]
+}

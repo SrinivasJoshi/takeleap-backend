@@ -1,0 +1,19 @@
+{
+  "id": "mig_cpgvqhamo6o6tl5jp3v0",
+  "parentID": "mig_cpgvqeimo6o6tl5jp3u0",
+  "checksum": "1:0c6f0eb46cf206a7d27f57349bc7dbd27dbb04789422e66321eed91347d1b265",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "avatar",
+          "type": "file[]",
+          "file[]": {
+            "defaultPublicAccess": true
+          }
+        },
+        "table": "personalMentors"
+      }
+    }
+  ]
+}
