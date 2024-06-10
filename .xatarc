@@ -1,8 +1,7 @@
 {
   "databaseURL": "https://hi-s-workspace-83b85m.us-east-1.xata.sh/db/takeleap-db",
   "codegen": {
-    "output": "xata.js",
-    "moduleType": "cjs",
-    "declarations": true
+    "output": "src/xata.js",
+    "moduleType": "cjs"
   }
 }

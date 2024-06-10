@@ -15,7 +15,7 @@ router.get('/getAllMentors', async(req, res) => {
       res.status(200).send({Status:'200',Data:data,err:''});
     } catch (error) {
       console.log(error);
-      res.status(200).send({Status:'500',Data:[],err:'Internal Server Error'});
+      res.status(200).send({Status:'500',Data:[],err:'Internal Server Error',errorMessage:error.toString()});
     }
 });
 
@@ -24,10 +24,13 @@ router.get('/getMentorById',async(req,res)=>{
     const mentordId = req.body.mentorId;
     try {
       let {contactNumber,...data} = await xata.db['personalMentors'].read(mentordId);
-      let admitIds = data.admitLinks;
-      let expIds = data.professionalLinks;
-      let academicId = data.academicLink.id;
-      let mentorshipId = data.mentorshipLink.id;
+      if(!data){
+        return res.status(200).send({Status:'200',Data:[],err:''});
+      }
+      let admitIds = data.admitLinks ? data.admitLinks : [];
+      let expIds = data.professionalLinks ? data.professionalLinks : [];
+      let academicId = data.academicLink?.id;
+      let mentorshipId = data.mentorshipLink?.id;
 
       let admits = await Promise.all(admitIds.map(async (admitId) => {
         return await xata.db.admits.read(admitId);
@@ -37,8 +40,14 @@ router.get('/getMentorById',async(req,res)=>{
         return await xata.db.professionalExperiences.read(expId);
       }));
 
-      let academicData = await xata.db.academic.read(academicId);
-      let mentorshipData = await xata.db.mentorship.read(mentorshipId);
+      let academicData = [];
+      if(academicId){
+        academicData = await xata.db.academic.read(academicId);
+      }
+      let mentorshipData =[];
+      if(mentorshipId){
+        mentorshipData = await xata.db.mentorship.read(mentorshipId);
+      }
 
       const {admitLinks,professionalLinks,academicLink,mentorshipLink,...finalData} = {
         admits,
@@ -51,13 +60,14 @@ router.get('/getMentorById',async(req,res)=>{
       res.status(200).send({Status:'200',Data:finalData,err:''});
     } catch (error) {
       console.log(error);
-      res.status(200).send({Status:'500',Data:[],err:'Internal Server Error'});
+      res.status(200).send({Status:'500',Data:[],err:'Internal Server Error',errorMessage:error.toString()});
     }
 });
 
 router.post('/addMentorPersonalData', upload.single('file'), async (req, res) => {
   const xata = getXataClient();
   let data = req.body; 
+  console.log(data)
 
   try {
     const admits = await xata.db.admits.create(JSON.parse(data.admits));
@@ -84,9 +94,11 @@ router.post('/addMentorPersonalData', upload.single('file'), async (req, res) =>
       contactNumber: data.contactNumber,
       greScore: parseInt(data.greScore),
       toeflScore: parseInt(data.toeflScore),
-      avatar: avatar,
+      avatar: [avatar],
       admitLinks: admitIds
     });
+
+    console.log(mentors);
 
     res.status(200).send({Status: '201', Data: mentors, error: ''})
   } catch (error) {
