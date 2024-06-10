@@ -1,0 +1,12 @@
+{
+  "id": "mig_cpad157q6uod4r4il8bg",
+  "parentID": "mig_cpad120o1pu8gr8gigsg",
+  "checksum": "1:2f9a88ec555d547c858fcd0b2fd6b0b33926ec4236edfbc2a959ae3049521ad4",
+  "operations": [
+    {
+      "addTable": {
+        "table": "academic"
+      }
+    }
+  ]
+}

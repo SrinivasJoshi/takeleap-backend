@@ -1,0 +1,13 @@
+{
+  "id": "mig_cpad120o1pu8gr8gigsg",
+  "parentID": "mig_cpad0nlaucpj8rbfau5g",
+  "checksum": "1:b3991c21c78965f49500edf4dec8b9e09c369638351a29e412fb7659f28b7113",
+  "operations": [
+    {
+      "renameTable": {
+        "newName": "personalMentors",
+        "oldName": "mentors"
+      }
+    }
+  ]
+}

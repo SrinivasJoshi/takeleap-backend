@@ -1,0 +1,16 @@
+{
+  "id": "mig_cpacvpnq6uod4r4il890",
+  "parentID": "mig_cpacvmvq6uod4r4il880",
+  "checksum": "1:7f8f5b0520450ebdd29d1299f198e5f36b3470b58a6e461ab718742a21e07894",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "greScore",
+          "type": "int"
+        },
+        "table": "mentors"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "mig_cpad3jvq6uod4r4il8hg",
+  "parentID": "mig_cpad3g7q6uod4r4il8gg",
+  "checksum": "1:98b9c9c1a286ba3e078e399e8860d9a04297b9ac3679a9925595582efe523978",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "undergradProgram",
+          "type": "string"
+        },
+        "table": "academic"
+      }
+    }
+  ]
+}

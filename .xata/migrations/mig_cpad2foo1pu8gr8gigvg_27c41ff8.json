@@ -1,0 +1,16 @@
+{
+  "id": "mig_cpad2foo1pu8gr8gigvg",
+  "parentID": "mig_cpad2a0o1pu8gr8gigtg",
+  "checksum": "1:27c41ff883275668c7de26134a93b5698525f9c23e507d409d2164233d8c4337",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "masterProgram",
+          "type": "string"
+        },
+        "table": "academic"
+      }
+    }
+  ]
+}

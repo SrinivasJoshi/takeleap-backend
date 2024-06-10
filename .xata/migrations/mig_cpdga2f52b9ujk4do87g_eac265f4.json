@@ -1,0 +1,13 @@
+{
+  "id": "mig_cpdga2f52b9ujk4do87g",
+  "parentID": "mig_cpal218o1pu8gr8gij5g",
+  "checksum": "1:eac265f4e91e76213d411e9873da5dcc3d34315a8d1d5fc9c1a8016ca2b9594e",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "admitUni",
+        "table": "personalMentors"
+      }
+    }
+  ]
+}

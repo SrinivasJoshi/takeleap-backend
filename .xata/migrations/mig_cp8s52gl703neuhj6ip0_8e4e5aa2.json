@@ -1,0 +1,16 @@
+{
+  "id": "mig_cp8s52gl703neuhj6ip0",
+  "parentID": "mig_cp8s4nbrgin2nopficcg",
+  "checksum": "1:8e4e5aa267cdebef6663a465858043e0813b20f3156cf0682c80f3608192a846",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "reading",
+          "type": "int"
+        },
+        "table": "toeflScore"
+      }
+    }
+  ]
+}

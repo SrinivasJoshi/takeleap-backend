@@ -1,0 +1,13 @@
+{
+  "id": "mig_cpad5aoo1pu8gr8gih70",
+  "parentID": "mig_cpad56vq6uod4r4il8lg",
+  "checksum": "1:09c38c6763ee18a117d3954581bb9d5a2cd99d5565162419713815911ef7f122",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "experienceLinks",
+        "table": "personalMentors"
+      }
+    }
+  ]
+}

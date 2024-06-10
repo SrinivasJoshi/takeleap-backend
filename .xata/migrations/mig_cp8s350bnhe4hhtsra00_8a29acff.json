@@ -1,0 +1,16 @@
+{
+  "id": "mig_cp8s350bnhe4hhtsra00",
+  "parentID": "mig_cp8s32ol703neuhj6if0",
+  "checksum": "1:8a29acff3a54725596277ede2ee63686bbd7acfacdb312344e4f09a2aaf87c9f",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "currentStatus",
+          "type": "string"
+        },
+        "table": "mentors"
+      }
+    }
+  ]
+}

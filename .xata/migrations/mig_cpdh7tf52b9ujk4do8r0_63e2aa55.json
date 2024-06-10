@@ -1,0 +1,19 @@
+{
+  "id": "mig_cpdh7tf52b9ujk4do8r0",
+  "parentID": "mig_cpdh7pf52b9ujk4do8q0",
+  "checksum": "1:63e2aa55f8c903b728d9d029a11f8b4ca958c9027c211a1e832e9f0e827a4cdd",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "academicLink",
+          "type": "link",
+          "link": {
+            "table": "academic"
+          }
+        },
+        "table": "personalMentors"
+      }
+    }
+  ]
+}

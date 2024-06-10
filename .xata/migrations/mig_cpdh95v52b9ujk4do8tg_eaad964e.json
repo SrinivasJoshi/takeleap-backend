@@ -1,0 +1,16 @@
+{
+  "id": "mig_cpdh95v52b9ujk4do8tg",
+  "parentID": "mig_cpdh91ah8qg72krp8pn0",
+  "checksum": "1:eaad964eec10d30a6215de014d4f20585fef8ec90169d902637adbaef95b0798",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "expertise",
+          "type": "multiple"
+        },
+        "table": "mentorship"
+      }
+    }
+  ]
+}

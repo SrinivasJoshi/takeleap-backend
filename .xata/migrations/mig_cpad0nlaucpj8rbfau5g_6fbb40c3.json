@@ -1,0 +1,13 @@
+{
+  "id": "mig_cpad0nlaucpj8rbfau5g",
+  "parentID": "mig_cpad085aucpj8rbfau4g",
+  "checksum": "1:6fbb40c342d2d91c4c2aa420df4ea81666c04f9fcebfdb239434cd7b28ed1386",
+  "operations": [
+    {
+      "renameTable": {
+        "newName": "curricularActivities",
+        "oldName": "extraCurricular"
+      }
+    }
+  ]
+}

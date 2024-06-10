@@ -1,0 +1,13 @@
+{
+  "id": "mig_cpekpk752b9ujk4dop40",
+  "parentID": "mig_cpekphqh8qg72krp95b0",
+  "checksum": "1:dc5e854ad9f5efe4f7ca06f26ec2e0c7b375cf0c2f04ff54f359433cf6e84aa3",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "academicLinks",
+        "table": "personalMentors"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "mig_cp9it4obnhe4hhtsrdkg",
+  "parentID": "mig_cp9dfnobnhe4hhtsrcv0",
+  "checksum": "1:15dc788ab7432371aec38281230d7ec5a469da84cdc27f6017a928b7f3902289",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "contactNumber",
+          "type": "string"
+        },
+        "table": "mentors"
+      }
+    }
+  ]
+}

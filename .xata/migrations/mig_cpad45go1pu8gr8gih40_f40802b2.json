@@ -1,0 +1,16 @@
+{
+  "id": "mig_cpad45go1pu8gr8gih40",
+  "parentID": "mig_cpad410o1pu8gr8gih2g",
+  "checksum": "1:f40802b2a8e8f4f91cd9c937f45d438a7a4d22a91cab9b7877c4e7ff4522c9fb",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "classRank",
+          "type": "int"
+        },
+        "table": "academic"
+      }
+    }
+  ]
+}

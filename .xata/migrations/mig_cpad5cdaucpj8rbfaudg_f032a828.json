@@ -1,0 +1,13 @@
+{
+  "id": "mig_cpad5cdaucpj8rbfaudg",
+  "parentID": "mig_cpad5aoo1pu8gr8gih70",
+  "checksum": "1:f032a828a2d92b13e80b13a3a5f007ecbae6a91b2d4e6ff4a0eeca83d1f4a177",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "publicationLinks",
+        "table": "personalMentors"
+      }
+    }
+  ]
+}

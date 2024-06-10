@@ -1,0 +1,16 @@
+{
+  "id": "mig_cp9dfnobnhe4hhtsrcv0",
+  "parentID": "mig_cp9dfkgbnhe4hhtsrcu0",
+  "checksum": "1:bd2df3142a15416556338666bc9cdb2af5b1a925a7c8cec8a80deb17f5f21087",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "experienceLinks",
+          "type": "multiple"
+        },
+        "table": "mentors"
+      }
+    }
+  ]
+}

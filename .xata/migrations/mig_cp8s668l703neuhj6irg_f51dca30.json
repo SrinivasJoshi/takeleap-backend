@@ -1,0 +1,12 @@
+{
+  "id": "mig_cp8s668l703neuhj6irg",
+  "parentID": "mig_cp8s5v3rgin2nopficg0",
+  "checksum": "1:f51dca308b523292112eb83b7675659c6372a967aeb47424f9cbb0a309901be4",
+  "operations": [
+    {
+      "addTable": {
+        "table": "professionalExperiences"
+      }
+    }
+  ]
+}

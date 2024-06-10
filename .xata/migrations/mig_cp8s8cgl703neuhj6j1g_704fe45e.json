@@ -1,0 +1,13 @@
+{
+  "id": "mig_cp8s8cgl703neuhj6j1g",
+  "parentID": "mig_cp8s8ajrgin2nopfico0",
+  "checksum": "1:704fe45ed3950bc1c9aaa8ee0cc068f0b50ba31557964d0e24c9b4a39459f576",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "toeflLink",
+        "table": "mentors"
+      }
+    }
+  ]
+}

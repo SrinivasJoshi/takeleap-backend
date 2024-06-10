@@ -1,0 +1,13 @@
+{
+  "id": "mig_cpactevq6uod4r4il7t0",
+  "parentID": "mig_cpactb5aucpj8rbfau1g",
+  "checksum": "1:df84930a9e0a3eeda846b841cfa94c51def5bac1baf743ff292ebc3d1ca9543b",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "greLink",
+        "table": "mentors"
+      }
+    }
+  ]
+}

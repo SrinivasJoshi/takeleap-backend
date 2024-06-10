@@ -1,0 +1,16 @@
+{
+  "id": "mig_cpdh91ah8qg72krp8pn0",
+  "parentID": "mig_cpdh8r752b9ujk4do8sg",
+  "checksum": "1:6292d274394d215803fd1ecc4a2231917cafc6c7bd7aa8130723a9f23fef5f7d",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "programs",
+          "type": "multiple"
+        },
+        "table": "mentorship"
+      }
+    }
+  ]
+}

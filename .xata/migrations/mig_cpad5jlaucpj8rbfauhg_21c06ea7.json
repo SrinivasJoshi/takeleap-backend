@@ -1,0 +1,13 @@
+{
+  "id": "mig_cpad5jlaucpj8rbfauhg",
+  "parentID": "mig_cpad5idaucpj8rbfaugg",
+  "checksum": "1:21c06ea74902f4830126bddcf03b51389d7b34c64cb14b8a2be6d682dbc3a115",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "undergraduateGPA",
+        "table": "personalMentors"
+      }
+    }
+  ]
+}

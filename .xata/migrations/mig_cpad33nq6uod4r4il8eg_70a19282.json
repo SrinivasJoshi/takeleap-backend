@@ -1,0 +1,16 @@
+{
+  "id": "mig_cpad33nq6uod4r4il8eg",
+  "parentID": "mig_cpad30vq6uod4r4il8dg",
+  "checksum": "1:70a19282123c906ac063761d6d1e4e0bd5b2a334a0c23cd7d0aca8cc6202bed0",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "startYear",
+          "type": "int"
+        },
+        "table": "academic"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "mig_cpacvlfq6uod4r4il870",
+  "parentID": "mig_cpacvgfq6uod4r4il860",
+  "checksum": "1:13b8ccc3265bf21b3d035150b89d42ceb4c7c8d1f15d9ea1e1022de82a2410ed",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "greScore",
+        "table": "mentors"
+      }
+    }
+  ]
+}

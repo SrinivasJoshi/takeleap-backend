@@ -1,0 +1,16 @@
+{
+  "id": "mig_cpacu9nq6uod4r4il810",
+  "parentID": "mig_cpacu1nq6uod4r4il800",
+  "checksum": "1:ca7f2a49ef6910dc8ae455966ad4e3ab4d52f3245dd58aeee3a007c7ff681502",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "avatar",
+          "type": "file"
+        },
+        "table": "mentors"
+      }
+    }
+  ]
+}

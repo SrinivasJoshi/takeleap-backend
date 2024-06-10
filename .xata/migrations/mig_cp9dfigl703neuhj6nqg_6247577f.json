@@ -1,0 +1,13 @@
+{
+  "id": "mig_cp9dfigl703neuhj6nqg",
+  "parentID": "mig_cp9d8r3rgin2nopfigug",
+  "checksum": "1:6247577f40a85f1d713d184da5d80614e5e4856ace7163d73a5faff98b442105",
+  "operations": [
+    {
+      "removeColumn": {
+        "column": "publicationLink",
+        "table": "mentors"
+      }
+    }
+  ]
+}

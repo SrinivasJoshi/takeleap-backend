@@ -1,0 +1,16 @@
+{
+  "id": "mig_cpad368o1pu8gr8gih1g",
+  "parentID": "mig_cpad33nq6uod4r4il8eg",
+  "checksum": "1:956b82950241beec17c9b9daa338d9de1b57eb5690edcfeb45cef0e2cffc3f21",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "endTerm",
+          "type": "string"
+        },
+        "table": "academic"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "mig_cp8s3h8bnhe4hhtsra10",
+  "parentID": "mig_cp8s3brrgin2nopfic70",
+  "checksum": "1:291aa6f23ee866a6bdee5f93aa783ac648b3f53b2766f24c2d67c6a3f7034627",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "undergraduateGPA",
+          "type": "float"
+        },
+        "table": "mentors"
+      }
+    }
+  ]
+}

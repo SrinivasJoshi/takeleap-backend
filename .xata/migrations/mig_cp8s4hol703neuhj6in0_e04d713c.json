@@ -1,0 +1,16 @@
+{
+  "id": "mig_cp8s4hol703neuhj6in0",
+  "parentID": "mig_cp8s4egl703neuhj6im0",
+  "checksum": "1:e04d713c4602e19294f4d83c5b62774060f391131120f44d859f2ad69330bec5",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "speaking",
+          "type": "int"
+        },
+        "table": "toeflScore"
+      }
+    }
+  ]
+}

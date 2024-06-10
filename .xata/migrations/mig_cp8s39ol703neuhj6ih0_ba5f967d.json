@@ -1,0 +1,16 @@
+{
+  "id": "mig_cp8s39ol703neuhj6ih0",
+  "parentID": "mig_cp8s370l703neuhj6ig0",
+  "checksum": "1:ba5f967dcce192118b929a4515179de093ccda319d77fb9817810edccb18ae66",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "underGradInstitution",
+          "type": "string"
+        },
+        "table": "mentors"
+      }
+    }
+  ]
+}

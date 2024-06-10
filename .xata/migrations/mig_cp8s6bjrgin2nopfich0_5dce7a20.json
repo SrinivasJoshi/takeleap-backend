@@ -1,0 +1,16 @@
+{
+  "id": "mig_cp8s6bjrgin2nopfich0",
+  "parentID": "mig_cp8s668l703neuhj6irg",
+  "checksum": "1:5dce7a208e1182ed87a5523b571555dd5c8f21ee6e59f65d1b55e405fcc3cbf4",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "title",
+          "type": "string"
+        },
+        "table": "professionalExperiences"
+      }
+    }
+  ]
+}

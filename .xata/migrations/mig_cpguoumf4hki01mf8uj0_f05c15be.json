@@ -1,0 +1,16 @@
+{
+  "id": "mig_cpguoumf4hki01mf8uj0",
+  "parentID": "mig_cpguoj2mo6o6tl5jp36g",
+  "checksum": "1:f05c15bed046e354502190a6d4445da263e6f0e31366a39350fed8ce50e3e1a0",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "reasonToMentor",
+          "type": "multiple"
+        },
+        "table": "mentorship"
+      }
+    }
+  ]
+}

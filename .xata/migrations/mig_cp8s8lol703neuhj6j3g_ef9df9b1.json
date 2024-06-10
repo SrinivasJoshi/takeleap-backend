@@ -1,0 +1,19 @@
+{
+  "id": "mig_cp8s8lol703neuhj6j3g",
+  "parentID": "mig_cp8s8g8l703neuhj6j2g",
+  "checksum": "1:ef9df9b12c86b92e9111920810998d1ded83e396fd7786ab57376875e2979f05",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "publicationLink",
+          "type": "link",
+          "link": {
+            "table": "publications"
+          }
+        },
+        "table": "mentors"
+      }
+    }
+  ]
+}

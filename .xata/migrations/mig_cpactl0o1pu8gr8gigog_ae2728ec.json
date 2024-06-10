@@ -1,0 +1,12 @@
+{
+  "id": "mig_cpactl0o1pu8gr8gigog",
+  "parentID": "mig_cpactg7q6uod4r4il7u0",
+  "checksum": "1:ae2728ec08b0beb94a2c818b3d5d826f700b46898fa7d7b5f854ff9b0dc1836e",
+  "operations": [
+    {
+      "removeTable": {
+        "table": "greScore"
+      }
+    }
+  ]
+}

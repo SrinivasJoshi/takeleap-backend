@@ -1,0 +1,16 @@
+{
+  "id": "mig_cpdh79n52b9ujk4do8p0",
+  "parentID": "mig_cpdh6cah8qg72krp8pl0",
+  "checksum": "1:e1c07af1174e9712cc7f9288dc08d12dcfa46d76f4f034b357b63bf32cd729c8",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "numberOfDoi",
+          "type": "int"
+        },
+        "table": "academic"
+      }
+    }
+  ]
+}

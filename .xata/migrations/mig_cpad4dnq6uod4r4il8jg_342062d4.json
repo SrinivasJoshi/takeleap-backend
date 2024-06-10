@@ -1,0 +1,16 @@
+{
+  "id": "mig_cpad4dnq6uod4r4il8jg",
+  "parentID": "mig_cpad488o1pu8gr8gih50",
+  "checksum": "1:342062d42efabf86a1444a459ec149f654e9e947b9302af7df108bb5ed5cc995",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "underStartYear",
+          "type": "int"
+        },
+        "table": "academic"
+      }
+    }
+  ]
+}

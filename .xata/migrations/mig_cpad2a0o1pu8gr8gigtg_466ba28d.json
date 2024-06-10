@@ -1,0 +1,16 @@
+{
+  "id": "mig_cpad2a0o1pu8gr8gigtg",
+  "parentID": "mig_cpad1jdaucpj8rbfau6g",
+  "checksum": "1:466ba28d5b1f1fb51147b4121dcbb5b9a895f3a484b4193d3eda13ee3fb6f243",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "masterUni",
+          "type": "string"
+        },
+        "table": "academic"
+      }
+    }
+  ]
+}

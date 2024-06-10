@@ -1,0 +1,16 @@
+{
+  "id": "mig_cp8s4c0l703neuhj6ikg",
+  "parentID": "mig_cp8s49jrgin2nopficbg",
+  "checksum": "1:5ba724c2fa3209359ff80266f53583b2cd62e11e37466fca68bf485e67a840eb",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "AWA",
+          "type": "int"
+        },
+        "table": "greScore"
+      }
+    }
+  ]
+}

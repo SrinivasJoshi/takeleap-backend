@@ -1,0 +1,19 @@
+{
+  "id": "mig_cpdh4qah8qg72krp8pi0",
+  "parentID": "mig_cpdh4jv52b9ujk4do8mg",
+  "checksum": "1:dad72f020a9adc2f20f8c382beafe5a966ce0bad71272312dd6848f2fbb37966",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "admitLink",
+          "type": "link",
+          "link": {
+            "table": "admits"
+          }
+        },
+        "table": "personalMentors"
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "mig_cpal218o1pu8gr8gij5g",
+  "parentID": "mig_cpad5ttaucpj8rbfaujg",
+  "checksum": "1:3c61570204037135f0539615dbeda6627b8880f4bd6b4a55f15a8394b8bc336b",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "year",
+          "type": "int"
+        },
+        "table": "publications"
+      }
+    }
+  ]
+}

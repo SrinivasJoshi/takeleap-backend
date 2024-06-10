@@ -1,0 +1,16 @@
+{
+  "id": "mig_cp8s4nbrgin2nopficcg",
+  "parentID": "mig_cp8s4l0l703neuhj6io0",
+  "checksum": "1:0eac91e3ca6515dabec92a92d744bb4e66a94d99d4e27b32244ab5046d7d2f44",
+  "operations": [
+    {
+      "addColumn": {
+        "column": {
+          "name": "listening",
+          "type": "int"
+        },
+        "table": "toeflScore"
+      }
+    }
+  ]
+}
